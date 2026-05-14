@@ -1,0 +1,11 @@
+{%- for child in sorted_pages -%}
+  <li class="nav-list-item">
+    <a href="{{ child.url | relative_url }}" class="nav-list-link">
+      {{ child.title }}
+      {%- if child.description -%}
+        <span class="nav-description">{{ child.description }}</span>
+      {%- endif -%}
+    </a>
+    ...
+  </li>
+{%- endfor -%}
