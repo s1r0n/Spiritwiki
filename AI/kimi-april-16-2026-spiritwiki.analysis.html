@@ -1,0 +1,1048 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The SpiritWiki: A Knowledge System for Progressive Global Transformation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Tiempos+Headline:wght@400;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --forest-green: #2d5016;
+            --earth-brown: #8b6f47;
+            --sage-green: #9caf88;
+            --warm-cream: #f5f2e8;
+            --deep-indigo: #1e3a8a;
+            --soft-amber: #d97706;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--warm-cream);
+            color: #2c3e50;
+        }
+        
+        .serif-heading {
+            font-family: 'Tiempos Headline', serif;
+        }
+        
+        .fixed-toc {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 280px;
+            background: linear-gradient(135deg, var(--forest-green) 0%, var(--deep-indigo) 100%);
+            color: white;
+            padding: 2rem 1.5rem;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--warm-cream) 0%, var(--sage-green) 50%, var(--earth-brown) 100%);
+            min-height: 70vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 4rem;
+            margin-left: 280px;
+        }
+        
+        .hero-text {
+            z-index: 2;
+        }
+        
+        .hero-visual {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(45, 80, 22, 0.7) 0%, rgba(30, 58, 138, 0.5) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, var(--forest-green), var(--soft-amber), var(--deep-indigo));
+            margin: 4rem 0;
+        }
+        
+        .pull-quote {
+            border-left: 4px solid var(--soft-amber);
+            background: rgba(217, 119, 6, 0.05);
+            padding: 2rem;
+            margin: 3rem 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--forest-green);
+        }
+        
+        .citation-link {
+            color: var(--deep-indigo);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted var(--deep-indigo);
+        }
+        
+        .citation-link:hover {
+            background: rgba(30, 58, 138, 0.1);
+            border-bottom: 1px solid var(--deep-indigo);
+        }
+        
+        .toc-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-link:hover {
+            color: white;
+            padding-left: 0.5rem;
+            border-left: 3px solid var(--soft-amber);
+        }
+        
+        .toc-link.level-2 {
+            padding-left: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .toc-link.level-3 {
+            padding-left: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+        
+        .executive-summary {
+            background: white;
+            padding: 3rem;
+            margin: 2rem 0 4rem 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(156, 175, 136, 0.3);
+        }
+        
+        .mermaid-container {
+            display: flex;
+            justify-content: center;
+            min-height: 300px;
+            max-height: 800px;
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mermaid-container .mermaid {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            cursor: grab;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none; /* 防止触摸设备上的默认行为 */
+            -webkit-user-select: none; /* 防止文本选择 */
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .mermaid-container .mermaid svg {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mermaid-container .mermaid:active {
+            cursor: grabbing;
+        }
+
+        .mermaid-container.zoomed .mermaid {
+            height: 100%;
+            width: 100%;
+            cursor: grab;
+        }
+
+        .mermaid-controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mermaid-control-btn {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #374151;
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mermaid-control-btn:hover {
+            background: #f8fafc;
+            border-color: #3b82f6;
+            color: #3b82f6;
+            transform: translateY(-1px);
+        }
+
+    .mermaid-control-btn:active {
+        transform: scale(0.95);
+    }
+
+    @media (max-width: 1024px) {
+        .fixed-toc {
+            display: none;
+        }
+        .mermaid-control-btn:not(.reset-zoom) {
+            display: none;
+        }
+        .mermaid-controls {
+            top: auto;
+            bottom: 15px;
+            right: 15px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            margin-left: 0;
+            padding: 2rem;
+        }
+        .main-content {
+            margin-left: 0;
+            padding: 0 1rem;
+        }
+        .hero-section {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .hero-text h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        .hero-text p {
+            font-size: 1rem;
+        }
+        .hero-text .text-xl {
+            font-size: 1.1rem;
+        }
+        .executive-summary {
+            padding: 1.5rem;
+        }
+        .executive-summary h2 {
+            font-size: 1.8rem;
+        }
+        .executive-summary h3 {
+            font-size: 1.3rem;
+        }
+    }
+    </style>
+  <base target="_blank">
+</head>
+
+  <body>
+    <!-- Fixed Table of Contents -->
+    <nav class="fixed-toc">
+      <h3 class="text-xl font-bold mb-6 text-white">Table of Contents</h3>
+      <a href="#core-identity" class="toc-link">Core Identity and Purpose</a>
+      <a href="#theoretical-grounding" class="toc-link">Theoretical Grounding</a>
+      <a href="#structural-architecture" class="toc-link">Structural Architecture</a>
+      <a href="#transformational-mechanisms" class="toc-link">Transformational Mechanisms</a>
+      <a href="#institutional-context" class="toc-link">Institutional Context</a>
+      <a href="#critical-frameworks" class="toc-link">Critical Frameworks</a>
+      <a href="#assessment" class="toc-link">Assessment of Potential</a>
+
+      <div class="mt-8 pt-8 border-t border-white/20">
+        <p class="text-xs opacity-60">A comprehensive analysis of the SpiritWiki knowledge system and its potential for progressive global transformation.</p>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-text">
+        <h1 class="serif-heading text-5xl font-bold mb-6 leading-tight">
+          <span class="text-forest-green">The SpiritWiki:</span>
+          <br/>
+          <em class="text-deep-indigo">A Knowledge System for Progressive Global Transformation</em>
+        </h1>
+        <p class="text-xl mb-8 text-earth-brown leading-relaxed">
+          Examining a sophisticated AI-integrated knowledge system that combines humanistic psychology, decolonized spiritual wisdom, and empirical research to support individual and collective transformation.
+        </p>
+        <div class="flex items-center space-x-4 text-sm text-forest-green">
+          <span class="flex items-center"><i class="fas fa-brain mr-2"></i>AI-Enhanced</span>
+          <span class="flex items-center"><i class="fas fa-globe mr-2"></i>Global Vision</span>
+          <span class="flex items-center"><i class="fas fa-seedling mr-2"></i>Transformative</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://kimi-web-img.moonshot.cn/img/miro.medium.com/ee2fc38e7524af8189838638a987eabddbc3d4aa.png" alt="Glowing neural network representing interconnected consciousness" class="w-full h-80 object-cover rounded-lg" size="large" aspect="wide" color="blue" style="photo" query="glowing neural network consciousness" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+        <div class="hero-overlay">
+          <div>
+            <i class="fas fa-lightbulb text-3xl mb-4"></i>
+            <p>Knowledge as a Living System</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <div class="main-content">
+      <div class="executive-summary">
+        <h2 class="serif-heading text-3xl font-bold mb-6 text-forest-green">Executive Summary</h2>
+        <p class="text-lg leading-relaxed mb-4">
+          The SpiritWiki represents a paradigm shift in knowledge systems—moving from passive encyclopedias to living, evolving engines for human development. This comprehensive analysis reveals a sophisticated framework that integrates humanistic psychology, decolonized spiritual wisdom, and empirical research to support both individual healing and collective transformation.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          <div class="bg-sage-green/20 p-4 rounded-lg">
+            <h4 class="font-bold text-forest-green mb-2">Core Innovation</h4>
+            <p class="text-sm">AI-integrated knowledge system that actively collaborates with users to generate new understanding rather than merely retrieving information.</p>
+          </div>
+          <div class="bg-deep-indigo/20 p-4 rounded-lg">
+            <h4 class="font-bold text-deep-indigo mb-2">Transformative Potential</h4>
+            <p class="text-sm">Systematic approach to healing toxic socialization through decolonized spiritual wisdom and democratized knowledge access.</p>
+          </div>
+          <div class="bg-soft-amber/20 p-4 rounded-lg">
+            <h4 class="font-bold text-earth-brown mb-2">Implementation Strategy</h4>
+            <p class="text-sm">Building new models that obsolete existing reality through knowledge infrastructure, community cultivation, and iterative development.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Sections -->
+      <section id="core-identity" class="mb-16">
+        <h2 class="serif-heading text-4xl font-bold mb-8 text-forest-green">Core Identity and Purpose</h2>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Foundational Architecture</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki functions as the <strong>semantic and ontological core</strong> of the <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">Avatar.GLOBAL Knowledge System (AGKS)</a>, representing a fundamental departure from traditional knowledge repositories. Unlike static archives, it is explicitly described as &#34;seeded in the Lightning Path repository and embodied in the SpiritWiki,&#34; suggesting an organic relationship between foundational framework and living expression.
+          </p>
+
+          <div class="pull-quote">
+            &#34;The AGKS is characterized as an emergent, collaborative, and distributed Knowledge System—three essential characteristics for any knowledge infrastructure capable of supporting genuine planetary transformation.&#34;
+          </div>
+
+          <p class="mb-6 leading-relaxed">
+            This embodiment metaphor reveals a deeper philosophical commitment: the SpiritWiki is not merely a container for information but the actualized form of a knowledge technology. The <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">AGKS&#39;s threefold character</a>—emergent, collaborative, distributed—constitutes what the architects consider essential for transformative knowledge infrastructure.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Living Knowledge Engine</h3>
+          <p class="mb-6 leading-relaxed">
+            The distinction between a &#34;living, evolving knowledge engine&#34; and a &#34;passive encyclopedia&#34; captures the SpiritWiki&#39;s essential nature. Traditional encyclopedias are fundamentally retrospective, attempting to capture established knowledge in stable form. The SpiritWiki, by contrast, is explicitly prospective—designed to generate new knowledge through the interaction of users, conceptual architecture, and AI components.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">Pathfinder AI integration</a> exemplifies this engine-like quality, operating as an active collaborator rather than a passive search tool. The AI is &#34;responsible for logical analysis, semantic organization, and structural coherence,&#34; with an explicit mandate to &#34;challenge, refine, and co-create knowledge in partnership with human stewards.&#34;
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Primary Mission</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s mission statement, articulated through its parent AGKS, is striking in its ambition: creating conditions for &#34;the Full Realization of Human Potential&#34; through four interconnected domains: <strong>Healing, Human Development, Planetary Stewardship, and Conscious Evolution</strong>. These domains operate simultaneously as mutually reinforcing aspects of transformational process.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The &#34;Human Potential&#34; to be realized is given specific content through the concept of <a href="https://www.athensjournals.gr/psychology/2025-6940-AJPSY-Sosteric-02.pdf" class="citation-link">Eupsychia</a>—Abraham Maslow&#39;s term for a &#34;good society&#34; that nurtures human flourishing. The SpiritWiki expands this concept to encompass &#34;connection, awakening, activation, and the perfection of consciousness,&#34; creating a comprehensive framework for individual and collective well-being.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="theoretical-grounding" class="mb-16">
+        <h2 class="serif-heading text-4xl font-bold mb-8 text-forest-green">Theoretical Grounding and Intellectual Lineage</h2>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Abraham Maslow&#39;s Humanistic Psychology</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s engagement with <a href="https://www.athensjournals.gr/psychology/2025-6940-AJPSY-Sosteric-02.pdf" class="citation-link">Maslow&#39;s concept of Eupsychia</a> represents both faithful inheritance and creative transformation. While Maslow originally conceived Eupsychia as a thought experiment about the society generated by 1,000 self-actualizing people, the SpiritWiki adopts it as a central social vision while expanding its theoretical grounding.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h4 class="font-bold text-forest-green mb-4">Circle of Seven Essential Needs</h4>
+            <p class="mb-4">The SpiritWiki fundamentally reconceptualizes human needs through this framework, replacing Maslow&#39;s hierarchical pyramid with a holistic model:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Outer Layer:</strong> Basic Needs (physiological, emotional, cognitive, psychological, environmental)</li>
+              <li><strong>Inner Layer:</strong> Need for Alignment</li>
+              <li><strong>Core:</strong> Connection—the fundamental need of every living thing</li>
+            </ul>
+          </div>
+
+          <p class="mb-6 leading-relaxed">
+            This reconceptualization reflects a theoretical commitment to the non-hierarchical nature of human needs. As <a href="https://www.athensjournals.gr/psychology/2025-6940-AJPSY-Sosteric-02.pdf" class="citation-link">the framework emphasizes</a>, &#34;all our needs are essential. If any needs go unmet, growth is slowed or atrophied and health is undermined.&#34;
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Decolonized Knowledge Production</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s decolonizing project begins with a <a href="https://www.mdpi.com/2077-1444/13/10/993" class="citation-link">historical sociology of spiritual knowledge</a>, documenting how &#34;elite actors had colonized the spiritual corpus of this planet.&#34; The case of the Tarot exemplifies this analysis: what appears as &#34;an ancient fountain of spiritual wisdom&#34; is revealed as &#34;an elite constructed discourse invented by the emerging industrial bourgeoisie during the Industrial Revolution.&#34;
+          </p>
+
+          <div class="pull-quote">
+            &#34;The Tarot is in fact an elite constructed discourse... part of what Decker, Depaulis and Dummet call the &#39;most successful propaganda campaign ever launched&#39; for lubricating the transition from Feudalism to Industrial Capitalism.&#34;
+          </div>
+
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s response is <a href="https://repo.lightningpath.org/assets/monographs/triumph-of-spirit-archetype-system.pdf" class="citation-link">systematic demystification combined with creative replacement</a>. The Triumph of Spirit Archetype System (TOSAS) provides &#34;a new creation template&#34; with archetypes designed to &#34;foster healing and connection in all people, and not greed, power, and competition.&#34;
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The integration of <a href="https://www.athensjournals.gr/psychology/2025-6940-AJPSY-Sosteric-02.pdf" class="citation-link">Indigenous knowledge systems</a> goes beyond tokenistic inclusion to genuine theoretical integration. The Circle of Seven Essential Needs was &#34;suggested by Gina Ratkovic of the Carry the Kettle First Nation,&#34; treating Indigenous knowledge as specific contributions from specific knowledge holders rather than generic &#34;traditional wisdom.&#34;
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Transpersonal and Mystical Traditions</h3>
+          <p class="mb-6 leading-relaxed">
+            The concept of <a href="https://www.mdpi.com/2077-1444/13/10/993" class="citation-link">Connection Experience</a> is foundational to the SpiritWiki&#39;s theoretical architecture. Defined with unusual precision as &#34;a discrete, short-term psychological, emotional, and physical experience of connection that are sufficiently above one&#39;s average daily phenomenological experience as to be perceived by the individual as a qualitatively different state of awareness, consciousness, and being,&#34; this concept bridges empirical investigation and spiritual phenomenology.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki maintains systematic distinction between <a href="https://spiritwiki.lightningpath.org/index.php/Authentic_Spirituality" class="citation-link">authentic spirituality and institutionalized religion</a>. Authentic spirituality is grounded in connection experiences, decolonized from elite ideological filters, healing-oriented, and empowering. Institutionalized religion, by contrast, is analyzed as a mechanism of social control that has frequently distorted authentic spiritual experience for elite benefit.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="structural-architecture" class="mb-16">
+        <h2 class="serif-heading text-4xl font-bold mb-8 text-forest-green">Structural Architecture and Components</h2>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Knowledge Organization</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s knowledge architecture is fundamentally relational, organized through &#34;semantic linkages&#34; that connect concepts across the system. This topological approach distinguishes it from both alphabetical encyclopedias and hierarchical taxonomies, enabling network structures where any concept may be approached from multiple directions.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h4 class="font-bold text-forest-green mb-4">Semantic MediaWiki Implementation</h4>
+            <p class="mb-4">The technical implementation enables:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Dynamic generation of Concept Maps for each entry</li>
+              <li>Multiple relationship types: Key Concepts, Components, Syncretic Terms</li>
+              <li>Multidimensional navigation through knowledge space</li>
+              <li>Discovery of connections beyond keyword search</li>
+            </ul>
+          </div>
+
+          <p class="mb-6 leading-relaxed">
+            The <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">curated definitions with scholarly citations</a> maintain academic standards while supporting the system&#39;s synthetic ambition. The range of sources spans psychology, sociology, religious studies, Indigenous studies, and neuroscience, reflecting the SpiritWiki&#39;s rejection of disciplinary parochialism.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Main Content Categories</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki organizes content into several top-level categories that enable both theoretical and practical navigation. The <a href="https://www.mdpi.com/2077-1444/13/10/993" class="citation-link">Eupsychia category</a> develops the social and institutional dimensions of transformative vision, extending individual developmental frameworks to collective application.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The <a href="https://spiritwiki.lightningpath.org/index.php/What_is_My_Purpose" class="citation-link">Lightning Path category</a> contains the system&#39;s core developmental framework, encompassing the Connection Framework, Healing Framework, Psychological Framework, and related structures. This comprehensive approach enables multi-dimensional developmental support appropriate to different user needs and stages.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The <a href="https://spiritwiki.lightningpath.org/index.php/What_is_My_Purpose" class="citation-link">Pathfinder Educational Model (PEM)</a> represents the SpiritWiki&#39;s systematic approach to education, developed as an alternative to conventional schooling. Explicitly &#34;Trauma-Informed,&#34; &#34;Life-Centered,&#34; and &#34;Healing and Connection-Centered,&#34; the model addresses recognized failures of traditional education.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Pathfinder AI Integration</h3>
+          <p class="mb-6 leading-relaxed">
+            The <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">Pathfinder AI</a> represents the SpiritWiki&#39;s most distinctive technical innovation: a purpose-built artificial intelligence system designed specifically for knowledge navigation and co-creation. Unlike general-purpose search engines, Pathfinder is architecturally integrated with the SpiritWiki&#39;s semantic structure and conceptualized as an active collaborator rather than a passive tool.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The AI&#39;s responsibilities include &#34;logical analysis, semantic organization, and structural coherence,&#34; with an explicit mandate to &#34;challenge, refine, and co-create knowledge in partnership with human stewards.&#34; This generative capability extends to <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">AI-generated articles and term explorations</a>, representing a significant expansion from preservation of existing knowledge to active production of new understanding.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="transformational-mechanisms" class="mb-16">
+        <h2 class="serif-heading text-4xl font-bold mb-8 text-forest-green">Transformational Mechanisms</h2>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Individual Level: Healing and Development</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s individual transformation strategy begins with <a href="https://www.lightningpath.org/research/" class="citation-link">healing the damage caused by toxic socialization</a>—systematic patterns of psychological, emotional, and physical violence that characterize contemporary socialization processes. The LP HEALING Framework provides systematic approach to this foundational work, recognizing that without addressing damage, further development is compromised.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h4 class="font-bold text-forest-green mb-4">Three Stages of Individual Development</h4>
+            <ul class="list-disc pl-6 space-y-3">
+              <li><strong>Connection:</strong> Developing capacity for direct experiential relationship with the Fabric of Consciousness</li>
+              <li><strong>Awakening:</strong> Qualitative shift in consciousness recognizing true nature and relationship to reality</li>
+              <li><strong>Activation:</strong> Transformative &#34;pop&#34; where blockages disintegrate and authentic expression emerges</li>
+            </ul>
+          </div>
+
+          <p class="mb-6 leading-relaxed">
+            The ultimate individual goal is <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">perfection of consciousness through alignment</a>—complete coordination of Spiritual Ego (authentic spiritual consciousness) and Bodily Ego (psychological self) so that spiritual insight can be effectively expressed in physical action. This &#34;perfection&#34; is not moral perfectionism but functional completeness: the full actualization of human design.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Collective Level: Social Architecture</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s collective transformation strategy centers on <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">creation of harmonic social structures</a>—institutional and relational arrangements that support rather than obstruct human development. This Eupsychian project emphasizes building alternative social infrastructure that demonstrates and cultivates healthy social organization.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The <a href="https://repo.lightningpath.org/assets/monographs/triumph-of-spirit-archetype-system.pdf" class="citation-link">Triumph of Spirit Archetype System (TOSAS)</a> plays a crucial role in collective consciousness raising by providing &#34;a creation template&#34; for &#34;new stories that foster healing and connection in all people.&#34; The twenty-two archetypes provide shared symbolic vocabulary that can unite dispersed efforts toward common purpose.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki understands itself as contributing to <a href="https://spiritwiki.lightningpath.org/index.php/Main_Page" class="citation-link">paradigm shift</a>—fundamental transformation of the frameworks through which reality is understood. This involves ontological shift from materialism to consciousness-based understanding, epistemological expansion beyond narrow empiricism, and axiological reorientation from accumulation to connection.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Planetary Level: Stewardship and Evolution</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s planetary ambition extends to <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">transformation of social, economic, and cultural systems</a> according to symbiotic, decolonized principles. The guiding concepts—<strong>symbiosis</strong> (mutually beneficial relationship) and <strong>decolonization</strong> (systematic removal of colonial patterns)—shape all specific proposals for change.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The ultimate vision is <a href="https://www.lightningpath.org/research/" class="citation-link">emergence of ethical and spiritually grounded civilization</a>—planetary society organized around genuine human flourishing and conscious evolution. This civilization would be characterized by universal needs satisfaction, widespread connection capacity, authentic spirituality, symbiotic relationships, decolonized structures, and conscious evolution as ongoing collective project.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="institutional-context" class="mb-16">
+        <h2 class="serif-heading text-4xl font-bold mb-8 text-forest-green">Institutional Context: The Lightning Path Institute</h2>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Organizational Identity</h3>
+          <p class="mb-6 leading-relaxed">
+            The <a href="https://www.lightningpath.org/" class="citation-link">Lightning Path Institute</a> serves as the institutional vehicle for the SpiritWiki&#39;s transformative vision, explicitly characterized as a progressive educational and research institute. Its positioning within traditions of critical pedagogy and engaged scholarship distinguishes it from both purely academic institutions and commercial spiritual enterprises.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The Institute&#39;s distinctive focus is <a href="https://www.lightningpath.org/research/" class="citation-link">paradigm-shifting theory and pedagogy</a>—knowledge and methods designed to transform fundamental frameworks rather than merely operate within them. This focus shapes both what the Institute produces and how it produces it, bridging academic rigor with transformative practice.
+          </p>
+
+          <div class="pull-quote">
+            &#34;The Institute occupies a hybrid position, instantiated in Dr. Mike Sosteric&#39;s dual role as Associate Professor at Athabasca University and founder of the Lightning Path.&#34;
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Educational Offerings</h3>
+          <p class="mb-6 leading-relaxed">
+            The Institute&#39;s educational offerings include <a href="https://www.lightningpath.org/research/" class="citation-link">LP Rocket Guides</a> for accelerated learning, <a href="https://www.lightningpath.org/research/" class="citation-link">LP Workbooks</a> for structured developmental practice, and comprehensive curriculum for systematic training pathways. These tools embody the SpiritWiki&#39;s practice-oriented character, making sophisticated transformative methods accessible to diverse users.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The <a href="https://spiritwiki.lightningpath.org/index.php/What_is_My_Purpose" class="citation-link">Pathfinder Educational Model (PEM)</a> represents the Institute&#39;s systematic approach to education, explicitly &#34;Trauma-Informed,&#34; &#34;Life-Centered,&#34; and &#34;Healing and Connection-Centered.&#34; The model includes specific structural elements: Learning Hubs, Learning Pods with Healing and Connection Spaces, and Learning Series as delivery frameworks.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Research Program</h3>
+          <p class="mb-6 leading-relaxed">
+            The Institute&#39;s research program explicitly commits to <a href="https://www.lightningpath.org/research/" class="citation-link">empirical grounding of spiritual phenomena</a> through systematic investigation of experiences and capacities that conventional science often excludes. This includes auto-ethnographic documentation, phenomenological description, cross-cultural validation, and theoretical integration.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            A controversial but significant aspect of the research program is <a href="https://www.lightningpath.org/research/" class="citation-link">integration of connection supplements (psychedelics) for healing</a>. Framed as &#34;connection supplements&#34; rather than &#34;drugs,&#34; this research emphasizes functional purpose while maintaining commitment to proper preparation, guidance, and integration within broader connection practice frameworks.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="critical-frameworks" class="mb-16">
+        <h2 class="serif-heading text-4xl font-bold mb-8 text-forest-green">Critical Frameworks for Global Transformation</h2>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Diagnostic Analysis</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s diagnostic framework identifies <a href="https://spiritwiki.lightningpath.org/index.php/Main_Page" class="citation-link">widespread psychological damage</a> in the form of &#34;disconnected egos and fractured selves&#34; resulting from toxic socialization. This damage is understood as systematic outcome of social arrangements rather than individual pathology, with the &#34;Regime of Accumulation&#34; identified as the overarching system that &#34;undermines healthy human development.&#34;
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The analysis extends to <a href="https://www.mdpi.com/2077-1444/13/10/993" class="citation-link">systematic elite manipulation of consciousness</a> through control of narrative, distortion of spirituality, creation of false needs, and suppression of alternatives. The case of the Tarot exemplifies this analysis: what appears as ancient spiritual wisdom is revealed as elite propaganda designed to lubricate the transition to industrial capitalism.
+          </p>
+
+          <div class="pull-quote">
+            &#34;The most successful propaganda campaign ever launched succeeded because its ideological function was disguised as spiritual content rather than recognized as contemporary construction.&#34;
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Prescriptive Vision</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s prescriptive vision is captured in its quotation of <a href="https://spiritwiki.lightningpath.org/index.php/Main_Page" class="citation-link">Buckminster Fuller</a>: &#34;You never change things by fighting the existing reality. To change something, build a new model that makes the existing model obsolete.&#34; This principle shapes a strategic orientation focused on creating attractive alternatives rather than direct confrontation.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The positive vision centers on <a href="https://spiritwiki.lightningpath.org/index.php/Main_Page" class="citation-link">authentic human awakening, healing, and connection</a>—genuine transformation of consciousness and relationship that enables full human flourishing. The ultimate individual goal is <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">full alignment of Spiritual Ego and Bodily Ego</a>, enabling &#34;perfection of consciousness&#34; as functional completeness rather than moral perfectionism.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Implementation Strategy</h3>
+          <p class="mb-6 leading-relaxed">
+            The core implementation strategy is <a href="https://spiritwiki.lightningpath.org/index.php/Main_Page" class="citation-link">creation of knowledge infrastructure that enables empowered navigation</a>—tools and resources that allow individuals and communities to find their own path toward transformation rather than depending on authorized guides. This infrastructure includes conceptual frameworks, practical tools, typologies and assessments, and AI assistance.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The strategy explicitly embraces <a href="https://spiritwiki.lightningpath.org/index.php/Main_Page" class="citation-link">iterative development and constant evolution</a> rather than claiming complete or final knowledge. This evolutionary orientation combines epistemic humility with systematic commitment to improvement, institutionalized through editorial structures that enable continuous revision and community processes that identify gaps and propose improvements.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <section id="assessment" class="mb-16">
+        <h2 class="serif-heading text-4xl font-bold mb-8 text-forest-green">Assessment of Transformative Potential</h2>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Strengths and Innovations</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki&#39;s most striking strength is its <a href="https://spiritwiki.lightningpath.org/index.php/Main_Page" class="citation-link">comprehensive integration of disciplines</a> that have historically operated in isolation. The synthesis of psychology, sociology, neuroscience, Indigenous knowledge, and spiritual traditions represents genuine intellectual achievement that transcends superficial eclecticism. This integration enables practical coherence, allowing users to address multiple dimensions of their situation with consistent framework.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The <a href="https://www.lightningpath.org/" class="citation-link">systematic decolonization commitment</a> is instantiated in concrete practices: Indigenous team majority, explicit attribution of Indigenous contributions, land acknowledgment, integration of MTH expertise, and critique of Eurocentric science. This systematic approach distinguishes the SpiritWiki from both colonial spiritual traditions and superficially &#34;multicultural&#34; alternatives.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h4 class="font-bold text-forest-green mb-4">AI-Enhanced Innovation</h4>
+            <p class="mb-4">The Pathfinder AI integration represents significant innovation in knowledge system design:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Personalized guidance adapting to individual needs and developmental stages</li>
+              <li>Scalability extending sophisticated guidance to more users than human teachers could serve</li>
+              <li>Generative capabilities producing new content and term explorations</li>
+              <li>Architectural integration with semantic structure rather than superficial chatbot interface</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Questions and Considerations</h3>
+          <p class="mb-6 leading-relaxed">
+            Several important questions require consideration for the SpiritWiki to realize its transformative potential. The empirical claims about connection experiences, developmental stages, and transformative outcomes require <a href="https://www.lightningpath.org/research/" class="citation-link">critical examination and independent validation</a>. While the system adopts empirical methodologies, the scope and rigor of validation remains limited.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The scalability of individual practices to collective change presents theoretical and practical challenges. The mechanisms connecting individual development to institutional transformation are not fully specified, and the relationship between consciousness change and structural change requires further elaboration.
+          </p>
+
+          <div class="pull-quote">
+            &#34;Whether this alternative can achieve sufficient scale and impact to genuinely challenge dominant systems remains to be seen, though the ambition is clear: not merely to provide another spiritual resource but to contribute to fundamental transformation of how knowledge is produced and used for human flourishing.&#34;
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif-heading text-2xl font-semibold mb-6 text-deep-indigo">Comparative Positioning</h3>
+          <p class="mb-6 leading-relaxed">
+            The SpiritWiki <a href="https://spiritwiki.lightningpath.org/index.php/Main_Page" class="citation-link">explicitly contrasts itself with &#34;casual spiritual directories&#34;</a> through structural organization, methodological rigor, political commitment, practical integration, and evolutionary development. This positioning distinguishes it from both conventional spiritual resources and academic psychology.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            The relationship to <a href="https://www.athensjournals.gr/psychology/2025-6940-AJPSY-Sosteric-02.pdf" class="citation-link">humanistic psychology</a> is characterized by critical inheritance—preserving core commitments while advancing beyond recognized limitations through theoretical integration, methodological expansion, political engagement, and practical systematization.
+          </p>
+
+          <p class="mb-6 leading-relaxed">
+            Most fundamentally, the SpiritWiki positions itself as <a href="https://spiritwiki.lightningpath.org/index.php/Avatar.GLOBAL_Knowledge_System" class="citation-link">alternative to elite-controlled knowledge systems</a> through epistemic expansion, structural distribution, political democratization, economic accessibility, and practical empowerment. Whether this alternative can achieve transformative scale while maintaining its integrity remains a key question for assessment.
+          </p>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="mb-16">
+        <h2 class="serif-heading text-4xl font-bold mb-8 text-forest-green">Conclusion: Toward Transformative Knowledge Systems</h2>
+        <p class="text-lg leading-relaxed mb-6">
+          The SpiritWiki represents a significant innovation in knowledge system design, moving beyond passive information storage to active transformation support. Its integration of diverse disciplines, commitment to decolonization, practical accessibility, and AI-enhanced personalization create a foundation for addressing complex individual and collective challenges.
+        </p>
+        <p class="text-lg leading-relaxed mb-6">
+          The system&#39;s potential for progressive global transformation lies in its systematic approach to healing toxic socialization, its democratized knowledge access, and its practical tools for consciousness development. However, questions remain about empirical validation, scalability to collective change, and relationship to established institutional structures.
+        </p>
+        <p class="text-lg leading-relaxed mb-8">
+          As the SpiritWiki continues to evolve through its iterative, collaborative development process, it may contribute to fundamental transformation in how knowledge is produced, organized, and used for human flourishing. Whether it achieves this ambitious vision will depend on both its continued development and the broader social conditions that shape knowledge production and dissemination in our time.
+        </p>
+      </section>
+    </div>
+
+    <script>
+        // Initialize Mermaid with custom theme
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#f5f2e8',
+                primaryTextColor: '#2c3e50',
+                primaryBorderColor: '#2d5016',
+                lineColor: '#1e3a8a',
+                secondaryColor: '#9caf88',
+                tertiaryColor: '#d97706',
+                background: '#ffffff',
+                mainBkg: '#f5f2e8',
+                secondBkg: '#9caf88',
+                tertiaryBkg: '#d97706',
+                nodeBkg: '#f5f2e8',
+                nodeBorder: '#2d5016',
+                clusterBkg: '#9caf88',
+                clusterBorder: '#1e3a8a',
+                defaultLinkColor: '#1e3a8a',
+                titleColor: '#2c3e50',
+                edgeLabelBackground: '#ffffff',
+                nodeTextColor: '#2c3e50'
+            },
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            },
+            sequence: {
+                useMaxWidth: true
+            },
+            gantt: {
+                useMaxWidth: true
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight active section in TOC
+        const sections = document.querySelectorAll('section[id]');
+        const tocLinks = document.querySelectorAll('.toc-link');
+
+        function highlightActiveSection() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightActiveSection);
+        highlightActiveSection(); // Initial call
+
+        // Initialize Mermaid Controls for zoom and pan
+        function initializeMermaidControls() {
+            const containers = document.querySelectorAll('.mermaid-container');
+
+            containers.forEach(container => {
+            const mermaidElement = container.querySelector('.mermaid');
+            let scale = 1;
+            let isDragging = false;
+            let startX, startY, translateX = 0, translateY = 0;
+
+            // 触摸相关状态
+            let isTouch = false;
+            let touchStartTime = 0;
+            let initialDistance = 0;
+            let initialScale = 1;
+            let isPinching = false;
+
+            // Zoom controls
+            const zoomInBtn = container.querySelector('.zoom-in');
+            const zoomOutBtn = container.querySelector('.zoom-out');
+            const resetBtn = container.querySelector('.reset-zoom');
+            const fullscreenBtn = container.querySelector('.fullscreen');
+
+            function updateTransform() {
+                mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+                if (scale > 1) {
+                container.classList.add('zoomed');
+                } else {
+                container.classList.remove('zoomed');
+                }
+
+                mermaidElement.style.cursor = isDragging ? 'grabbing' : 'grab';
+            }
+
+            if (zoomInBtn) {
+                zoomInBtn.addEventListener('click', () => {
+                scale = Math.min(scale * 1.25, 4);
+                updateTransform();
+                });
+            }
+
+            if (zoomOutBtn) {
+                zoomOutBtn.addEventListener('click', () => {
+                scale = Math.max(scale / 1.25, 0.3);
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform();
+                });
+            }
+
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                scale = 1;
+                translateX = 0;
+                translateY = 0;
+                updateTransform();
+                });
+            }
+
+            if (fullscreenBtn) {
+                fullscreenBtn.addEventListener('click', () => {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.webkitRequestFullscreen) {
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) {
+                    container.msRequestFullscreen();
+                }
+                });
+            }
+
+            // Mouse Events
+            mermaidElement.addEventListener('mousedown', (e) => {
+                if (isTouch) return; // 如果是触摸设备，忽略鼠标事件
+
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                mermaidElement.style.cursor = 'grabbing';
+                updateTransform();
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging && !isTouch) {
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseleave', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            // 获取两点之间的距离
+            function getTouchDistance(touch1, touch2) {
+                return Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+                );
+            }
+
+            // Touch Events - 触摸事件处理
+            mermaidElement.addEventListener('touchstart', (e) => {
+                isTouch = true;
+                touchStartTime = Date.now();
+
+                if (e.touches.length === 1) {
+                // 单指拖动
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+
+                } else if (e.touches.length === 2) {
+                // 双指缩放
+                isPinching = true;
+                isDragging = false;
+
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                initialDistance = getTouchDistance(touch1, touch2);
+                initialScale = scale;
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && isDragging && !isPinching) {
+                // 单指拖动
+                const touch = e.touches[0];
+                translateX = touch.clientX - startX;
+                translateY = touch.clientY - startY;
+                updateTransform();
+
+                } else if (e.touches.length === 2 && isPinching) {
+                // 双指缩放
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                const currentDistance = getTouchDistance(touch1, touch2);
+
+                if (initialDistance > 0) {
+                    const newScale = Math.min(Math.max(
+                    initialScale * (currentDistance / initialDistance),
+                    0.3
+                    ), 4);
+                    scale = newScale;
+                    updateTransform();
+                }
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchend', (e) => {
+                // 重置状态
+                if (e.touches.length === 0) {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                // 延迟重置isTouch，避免鼠标事件立即触发
+                setTimeout(() => {
+                    isTouch = false;
+                }, 100);
+                } else if (e.touches.length === 1 && isPinching) {
+                // 从双指变为单指，切换为拖动模式
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+                }
+
+                updateTransform();
+            });
+
+            mermaidElement.addEventListener('touchcancel', (e) => {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                setTimeout(() => {
+                isTouch = false;
+                }, 100);
+
+                updateTransform();
+            });
+
+            // Enhanced wheel zoom with better center point handling
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const rect = container.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
+
+                // Adjust translation to zoom towards center
+                if (newScale !== scale) {
+                const scaleDiff = newScale / scale;
+                translateX = translateX * scaleDiff;
+                translateY = translateY * scaleDiff;
+                scale = newScale;
+
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+
+                updateTransform();
+                }
+            });
+
+            // Initialize display
+            updateTransform();
+            });
+        }
+
+        // Initialize Mermaid controls when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMermaidControls();
+        });
+    </script>
+  
+
+</body></html>
