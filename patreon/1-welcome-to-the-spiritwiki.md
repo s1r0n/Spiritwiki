@@ -4,7 +4,7 @@ title: "Welcome to the SpiritWiki"
 parent: Patreon Posts
 order: 1
 exclude_from_sidebar: true
-description: "Introduction to the SpiritWiki and appeal for support" 
+description: Introduction to the SpiritWiki and appeal for support
 ---
  
 ## Support the SpiritWiki: Building the Knowledge Foundation for full Human Flourishing
