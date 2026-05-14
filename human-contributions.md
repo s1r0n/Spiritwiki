@@ -5,9 +5,10 @@ nav_order: 3
 has_children: true
 ---
  
+## Human Contributions
 
-_On this page we collect various human contributions to the theoretical and empirical framework of the [SpiritWiki](https://spiritwiki.lightningpath.org). 
-_
+This section collects articles, analyses, and theoretical contributions written by human contributors. These pieces represent theoretical and empirical grounding, exploration, refinement, and expansion of concepts central to the project.
+
 ## General Overview
 
 ### [As We May Think](https://cdn.theatlantic.com/media/archives/1945/07/176-1/132407932.pdf)
