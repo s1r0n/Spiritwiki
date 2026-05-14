@@ -1,7 +1,8 @@
 ---
 layout: default
 title: AI Contributions 
-nav-order: 7
+nav_order: 5
+has_children: true
 ---
 
 ## AI Contributions to the SpiritWiki
