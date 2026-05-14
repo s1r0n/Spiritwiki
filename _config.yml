@@ -1,0 +1,26 @@
+title: SpiritWiki Repository
+tagline: 'To Heal and Reconnect'
+description: 'Theoretical and Empirical Contributions to understanding and deployment of the SpiritWiki as Knowledge Ecosystem.'
+url: http://repo-spiritwiki.lightningpath.org
+baseurl: ''
+permalink: pretty
+
+author:
+  name: Mike Sosteric
+  url: https://esosteric.lightningpath.org
+  email: mikes@athabascau.ca
+
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+search_enabled: true
+heading_anchors: true
+
+aux_links:
+  "Mike Sosteric":
+    - "https://esosteric.lightningpath.org"
+
+version: 1.1.0
