@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Welcome to the SpiritWiki"
-parent: Assets
+parent: Patreon Posts
 order: 1
 exclude_from_sidebar: true
 description: "Introduction to the SpiritWiki and appeal for support" 
