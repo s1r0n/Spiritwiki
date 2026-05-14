@@ -13,6 +13,8 @@ has_children: true    # Indicates this page has sub-pages
 #last_modified_date
 ---
 
+## Welcome to the SpiritWiki
+                  
 [The SpiritWiki](https://spiritwiki.lightningpath.org) is an organized, empirically grounded, and conceptually integrated Knowledge Ecosystem designed to support [Human Development](https://spiritwiki.lightningpath.org/index.php/Human_Development) and the [Full Realization](https://spiritwiki.lightningpath.org/index.php/Full_Realization) of [Human Potential](https://spiritwiki.lightningpath.org/index.php/Human_Potential).
 
 This [github repository](https://github.com/s1r0n/SpiritWiki) is the central theoretical repository and foundation for [The SpiritWiki.](https://spiritwiki.lightningpath.org) This repository collects theoretical and empirical contributions to the SpiritWiki project specifically, or to the creation of [Knowledge Ecosystems](https://spiritwiki.lightningpath.org/index.php/Knowledge_Ecosystem).
