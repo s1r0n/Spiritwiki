@@ -37,8 +37,8 @@ The Patreon Articles sections contains accessible explanations and updates on th
 
 The XML Dump is the complete XML dump of the SpiritWiki for easy AI ingestion
 
-- [Human Contributions](https://repo-spiritwiki.lightningpath.org/human-contributions.html)
-- [AI Contributions](https://repo-spiritwiki.lightningpath.org/ai-contributions.html)
+- [Human Contributions](https://repo-spiritwiki.lightningpath.org/human-contributions/)
+- [AI Contributions](https://repo-spiritwiki.lightningpath.org/ai-contributions/)
 - [Patreon Articles](https://repo-spiritwiki.lightningpath.org/patreon/)
 - [XML Dump](https://repo-spiritwiki.lightningpath.org/spiritwiki-xml/)
 
