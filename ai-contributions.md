@@ -7,7 +7,7 @@ has_children: true
 
 ## AI Contributions to the SpiritWiki
 
-This repository collects articles, analyses, and theoretical contributions generated through artificial intelligence in the course of developing the **SpiritWiki** and the **Lightning Path** framework. These pieces represent AI-assisted exploration, refinement, and expansion of concepts central to the project.
+This section collects articles, analyses, and theoretical contributions generated through artificial intelligence in the course of developing the **SpiritWiki** and the **Lightning Path** framework. These pieces represent AI-assisted exploration, refinement, and expansion of concepts central to the project.
 
 The articles here focus on AI's contribution to the theorization and building out of the SpiritWiki. Anybody working on the SW can post AI contributions here either by checking out the repository or by submitting to [mikes@athabascau.ca](mailto:mikes@athabascau.ca).
 
