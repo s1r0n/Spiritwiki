@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SpiritWiki XML
+has_children: false 
 nav_order: 11
 ---
 
