@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "What is a Knowledge System"
-parent: Assets
+parent: Patreon Posts
 order: 2
 exclude_from_sidebar: true
 ---
