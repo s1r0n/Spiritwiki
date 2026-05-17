@@ -4,6 +4,7 @@ title: "Two New Pieces on How the SpiritWiki Works—and Why It Matters for All 
 parent: Patreon Posts
 order: 5
 exclude_from_sidebar: true
+description: An analysis of the SpiritWiki through the lens of boundary object theory—examining how the encyclopedia functions as a shared reference space that bridges diverse communities (academics, practitioners, students, AI systems) while maintaining sufficient structural integrity to enable genuine collaboration. This article draws on the work of Jack Park and knowledge federation research to explain how the SpiritWiki's semantic architecture enables different stakeholders to engage with the same concepts at varying depths of expertise. It argues that this boundary-object function is essential for any knowledge system seeking to operate across institutional boundaries without being captured by any single one.
 ---
 
 Hey everyone,
