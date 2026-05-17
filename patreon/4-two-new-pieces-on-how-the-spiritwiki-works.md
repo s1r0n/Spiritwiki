@@ -1,7 +1,8 @@
 ---
 layout: page
 title: "Two New Pieces on How the SpiritWiki Works—and Why It Matters for All of Us"
-order: 3
+parent: Patreon Posts
+order: 5
 exclude_from_sidebar: true
 ---
 
