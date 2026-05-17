@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "As We May Think: Vannevar Bush's Vision for the Future of Knowledge"
-parent: "Assets"
+parent: Patreon Posts
 order: 3
 exclude_from_sidebar: true
 ---
