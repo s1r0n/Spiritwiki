@@ -2,8 +2,8 @@
 layout: page
 title: "As We May Think: Vannevar Bush's Vision for the Future of Knowledge"
 parent: Patreon Posts
-order: 3
-exclude_from_sidebar: true
+nav_order: 3
+nav_exclude: true
 summary: A critical engagement with Vannevar Bush's 1945 Atlantic Monthly essay and its revolutionary vision of associative knowledge technology—the memex, trail blazers, and conceptual linking that prefigured hypertext, the World Wide Web, and semantic wikis. This article traces how Bush's emancipatory vision was systematically corrupted by commercialization, militarization, and algorithmic manipulation, while arguing that the technologies he imagined are now finally available for their original purpose. The SpiritWiki is presented as the contemporary realization of Bush's memex - a tool for growing "in the wisdom of race experience" rather than drowning in information overload.
 ---
 
