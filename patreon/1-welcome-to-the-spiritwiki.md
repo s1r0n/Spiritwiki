@@ -2,8 +2,8 @@
 layout: page
 title: "Welcome to the SpiritWiki"
 parent: Patreon Posts
-order: 1
-exclude_from_sidebar: true
+nav_order: 1
+nav_exclude: true
 summary: An orientation to the SpiritWiki as the canonical knowledge repository of the Lightning Path—a decolonized, empirically grounded, and semantically structured encyclopedia designed to support human development and the full realization of human potential. This article explains how the SpiritWiki differs from conventional academic and spiritual encyclopedias by offering transparent, interlinked, and ideologically unencumbered access to concepts across psychology, sociology, and authentic spirituality. It serves as the essential starting point for anyone seeking to navigate the Avatar.GLOBAL Knowledge System
 ---
  
