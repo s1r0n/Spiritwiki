@@ -2,8 +2,8 @@
 layout: page
 title: "What is a Knowledge System"
 parent: Patreon Posts
-order: 2
-exclude_from_sidebar: true
+nav_order: 2
+nav_exclude: true
 summary: A theoretical introduction to knowledge systems as structured, dynamic architectures that shape what a society can know and who can be known—examining how mnemonic, print, and digital technologies constrain or enable epistemic possibilities across history. This article draws on the work of Vannevar Bush, Abraham Maslow, and contemporary knowledge ecosystem research to argue for intentional, ethically constructed alternatives to commercialized and fragmented information environments. It positions the SpiritWiki as a living example of such an alternative- a pacific instrument designed for wisdom rather than extraction.
 ---
 
