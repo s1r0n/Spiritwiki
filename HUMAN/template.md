@@ -1,7 +1,7 @@
 ---
 layout: default
 title: [article or file title]
-parent: [Human Contributions] 
+parent: General Overview 
 nav_order: 1
 has_children: true
 nav_exclude: true
