@@ -7,5 +7,5 @@ nav_exclude: true
 has_children: false
 ---
 
-## At the Speed of Thought
+## TLDR Electronic Journals and the Transformation of Scholarly Publication
 
