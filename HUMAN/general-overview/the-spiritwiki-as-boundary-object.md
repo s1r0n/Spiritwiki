@@ -3,6 +3,7 @@ layout: default
 title: The SpiritWiki in as Boundary Object
 parent: General Overview
 nav_order: 9
+nav_exclude: true
 has_children: true
 summary:  This article argues that the SpiritWiki Knowledge Ecosystem functions as a boundary-object infrastructure capable of supporting planetary-scale transformation
 ---
