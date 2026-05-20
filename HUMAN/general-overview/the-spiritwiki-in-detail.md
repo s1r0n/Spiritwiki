@@ -3,7 +3,8 @@ layout: default
 title: The SpiritWiki in Detail
 parent: General Overview
 nav_order: 7
-has_children: true
+has_children: false
+nav_exclude: true
 summary:  This article presents the SpiritWiki as a dynamic, curated knowledge ecosystem that integrates semantic linking, accountable stewardship, and firm ontological grounding to overcome the limitations of traditional textbooks, static journals, and uncontrolled open platforms
 ---
 
