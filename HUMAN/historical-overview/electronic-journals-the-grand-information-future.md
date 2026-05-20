@@ -1,4 +1,5 @@
-ayout: default
+---
+Layout: default
 title: Electronic Journals - The Grand Information Future
 parent: Human Contributions 
 nav_order: 5
