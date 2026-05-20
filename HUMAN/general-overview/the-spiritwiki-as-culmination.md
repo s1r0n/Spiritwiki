@@ -4,6 +4,7 @@ title: The SpiritWiki as Culmination
 parent: General Overview
 nav_order: 13
 has_children: true
+nav_exclude: true
 summary: planned
 ---
 
