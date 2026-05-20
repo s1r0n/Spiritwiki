@@ -1,3 +1,4 @@
+---
 layout: default
 title: At the Speed of Thought
 parent: Human Groundwork
