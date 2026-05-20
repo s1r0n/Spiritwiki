@@ -1,7 +1,7 @@
 ---
 layout: default
 title: At the Speed of Thought
-parent: Human Groundwork
+parent: Historical Groundwork
 nav_order: 2
 nav_exclude: true
 has_children: false
