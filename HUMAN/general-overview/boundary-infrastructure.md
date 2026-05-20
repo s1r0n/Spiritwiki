@@ -3,7 +3,8 @@ layout: default
 title: Boundary Infrastructrure for IBIS Federation
 parent: General Overview
 nav_order: 3
-has_children: true
+nav_exclude: true
+has_children: false
 summary: Translates Vannevar Bush's conceptual vision of associative trains into a concrete socio-technological infrastructure for large-scale collaborative sensemaking.
 ---
 
