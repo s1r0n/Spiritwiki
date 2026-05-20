@@ -3,7 +3,9 @@ layout: default
 title: As We May Think
 parent: General Overview
 nav_order: 1
+nav_exclude: true
 has_children: true
+
 summary: Bush argues that scientists must turn from instruments of destruction to technologies that amplify the mind’s capacity to manage inherited knowledge. In this article he explores what such technologies might look like.
 ---
 
