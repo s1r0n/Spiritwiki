@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Post-Gutenburg Galaxy: The Fourth Revolution in the Means of Production of Knowledge
+title: Post-Gutenburg Galaxy - The Fourth Revolution in the Means of Production of Knowledge
 parent: Historical Groundwork
 nav_order: 5
 nav_exclude: true
 has_children: false
-summary: In Post-Gutenberg Galaxy: The Fourth Revolution in the Means of Production of Knowledge, Stevan Harnad argues that human cognition and communication have undergone three qualitative revolutions—speech, writing, and print—each fundamentally altering how knowledge is produced and shared, and that a fourth revolution is now emerging through "electronic skywriting" (networked email and discussion groups).
+summary: In Post-Gutenberg Galaxy - The Fourth Revolution in the Means of Production of Knowledge, Stevan Harnad argues that human cognition and communication have undergone three qualitative revolutions—speech, writing, and print—each fundamentally altering how knowledge is produced and shared, and that a fourth revolution is now emerging through "electronic skywriting" (networked email and discussion groups).
 ---
 
 ## The Fourth Revolution in the Means of Production of Knowledge
