@@ -5,7 +5,7 @@ parent: Historical Groundwork
 nav_order: 5
 nav_exclude: true
 has_children: false
-summary: Published in 1996 in the Electronic Journal of Sociology, _Electronic Journals: The Grand Information Future?_ stands as one of the earliest political-economic warnings about the impending commercial betrayal of digital scholarly communication.
+summary: Published in 1996 in the Electronic Journal of Sociology, _Electronic Journals - The Grand Information Future?_ stands as one of the earliest political-economic warnings about the impending commercial betrayal of digital scholarly communication.
 ---
 
 ## Electronic Journals - The Grand Information Future
