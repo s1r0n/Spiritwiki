@@ -5,7 +5,7 @@ parent: Modern Theoretical Contributions
 nav_order: 3
 nav_exclude: true
 has_children: false
-summary: This bibliometric study maps the research landscape of scholarly communication from 1996 to 2021 using Web of Science data and literature visualization tools. Rather than offering a normative argument for reform, it provides an empirical panorama of how the field has evolved: from a closed, publication-centric model dominated by journals and citation indices toward an open, networked ecosystem characterized by social media dissemination, altmetrics, preprints, and globalized collaboration
+summary: This bibliometric study maps the research landscape of scholarly communication from 1996 to 2021 using Web of Science data and literature visualization tools. Rather than offering a normative argument for reform, it provides an empirical panorama of how the field has evolved - from a closed, publication-centric model dominated by journals and citation indices toward an open, networked ecosystem characterized by social media dissemination, altmetrics, preprints, and globalized collaboration
 ---
 
 
