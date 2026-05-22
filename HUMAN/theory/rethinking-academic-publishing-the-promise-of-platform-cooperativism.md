@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Re-thinking Academic Publishing: The Promise of Platform Cooperativism
+title: Re-thinking Academic Publishing -  The Promise of Platform Cooperativism
 parent: Modern Theoretical Contributions
 nav_order: 5
 nav_exclude: true
