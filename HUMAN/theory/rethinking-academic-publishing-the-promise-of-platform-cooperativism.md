@@ -5,7 +5,7 @@ parent: Modern Theoretical Contributions
 nav_order: 5
 nav_exclude: true
 has_children: false
-summary: 
+summary: This article argues that sustainable, equitable open-access publishing will not emerge from either for-profit or traditional not-for-profit models alone, because both frameworks remain exploitative in different ways
 ---
 
 
