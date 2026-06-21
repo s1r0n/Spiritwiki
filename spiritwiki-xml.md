@@ -9,4 +9,4 @@ Full XML download of SW
 
 [https://www.lightningpath.org/pathfinder-1.xml](https://www.lightningpath.org/pathfinder-1.xml)
 
-[https://www.lightningpath.org/pathfinder-2.xml](https://www.lightningpath.org/pathfinder-1.xml)
+[https://www.lightningpath.org/pathfinder-2.xml](https://www.lightningpath.org/pathfinder-2.xml)
