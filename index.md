@@ -19,11 +19,11 @@ has_children: true
                   
 [The SpiritWiki](https://spiritwiki.lightningpath.org) is an organized, empirically grounded, and conceptually integrated [Knowledge Ecosystem](https://spiritwiki.lightningpath.org/index.php/Knowledge_Ecosystem) designed to support [Human Development](https://spiritwiki.lightningpath.org/index.php/Human_Development) and the [Full Realization](https://spiritwiki.lightningpath.org/index.php/Full_Realization) of [Human Potential](https://spiritwiki.lightningpath.org/index.php/Human_Potential).
 
-This [github repository](https://github.com/s1r0n/SpiritWiki) is the central theoretical repository and foundation for [The SpiritWiki.](https://spiritwiki.lightningpath.org) This repository collects theoretical and empirical contributions to the SpiritWiki project specifically, or to the creation of [Knowledge Ecosystems](https://spiritwiki.lightningpath.org/index.php/Knowledge_Ecosystem).
+This [github repository](https://github.com/s1r0n/SpiritWiki) is the central theoretical repository and foundation for [The SpiritWiki.](https://spiritwiki.lightningpath.org) This repository collects theoretical and empirical contributions to the SpiritWiki project specifically, or to the creation of [Knowledge Ecosystems](https://spiritwiki.lightningpath.org/index.php/Knowledge_Ecosystem) in general.
 
 ## Structure
 
-The SpiritWiki repository is structured into four sections, a [Human Contributions](https://repo-spiritwiki.lightningpath.org/human-contributions/) section and an [AI Contributions Section.](https://repo-spiritwiki.lightningpath.org/ai-contributions/)
+The SpiritWiki repository is structured into two sections, a [Human Contributions](https://repo-spiritwiki.lightningpath.org/human-contributions/) section and an [AI Contributions Section.](https://repo-spiritwiki.lightningpath.org/ai-contributions/)
 
 The Human Contributions section contains theory, analysis, and research aimed at building out and grounding the SpiritWiki as [Knowledge System](https://spiritwiki.lightningpath.org/index.php/Knowledge_Ecosystem).
 
@@ -46,4 +46,4 @@ If you have something to contribute, or would like to, email mikes@athabascau.ca
 
 - [At the SpiritWiki home page](https://spiritwiki.lightningpath.org/index.php/Main_Page)
 - [SpiritWiki about page](https://spiritwiki.lightningpath.org/index.php/SpiritWiki)
-- [The SpiritWiki in Detail](https://repo-spiritwiki.lightningpath.org/HUMAN/the-spiritwiki-in-detail.pdf)
+- [The SpiritWiki in Detail](https://repo-spiritwiki.lightningpath.org/HUMAN/general-overview/the-spiritwiki-in-detail.pdf)
